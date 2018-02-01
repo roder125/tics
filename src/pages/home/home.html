@@ -1,14 +1,17 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color= "dark">
     <ion-title>
-      Ionic Blank
+      Tics
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <button ion-button color="dark" >Kalenderwochen</button>
+  <button ion-button color="dark" >Monate</button>
+
+    <ion-list>
+      <!-- Item aus der Liste wird Funktion bei click übergeben-->
+      <button ion-item *ngFor="let week of weeks" color="dark" (click)= "showItem(week)" >{{week.KW}}</button>
+    </ion-list>
 </ion-content>

@@ -1,0 +1,59 @@
+
+<ion-header>
+
+  <ion-navbar color= "dark">
+    <ion-title>Neuer Eintrag</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item id="projectnumbers" color="dark">  
+    <ion-label>Projektnummer</ion-label>
+      <ion-select [(ngModel)]="projectnumbers">
+          <ion-option value="0124124002213">0124124002213</ion-option>
+          <ion-option value="Z123A124124">Z123A124124</ion-option>
+          <ion-option value="891258928312">891258928312</ion-option>
+          <ion-option value="012459UUU918">012459UUU918</ion-option>
+          <ion-option value="888888123213">888888123213</ion-option>
+          <ion-option value="ZUR213123355">ZUR213123355</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item id="date"color="dark">
+        <ion-label>Datum</ion-label>
+        <ion-input type="date" title="date" text-right></ion-input>
+      </ion-item>
+    <ion-item id="begin"color="dark">
+      <ion-label>Uhrzeit Beginn</ion-label>
+      <ion-input type="time" title="begin" text-right></ion-input>
+    </ion-item>
+    <ion-item id="end"color="dark">
+        <ion-label>Uhrzeit Ende</ion-label>
+        <ion-input type="time" title="end" text-right></ion-input>
+      </ion-item>
+    <ion-item id="break"color="dark">
+        <ion-label>Pause</ion-label>
+        <ion-input type="number" title="break" text-right></ion-input>
+    </ion-item>
+    <ion-item id="projecttime"color="dark">
+        <ion-label>Projektzeit</ion-label>
+        <ion-input type="text" title="projecttime" text-right></ion-input>
+    </ion-item>
+    <ion-item id="comment"color="dark">
+        <ion-label>Kommentar</ion-label>
+        <ion-input type="text" title="comment" text-right></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div text-center>
+      <button ion-button ion-start color="dark" (click)="saveEntry()"><ion-icon name="add"> Speichern</ion-icon></button>
+      <button ion-button color="dark"><ion-icon name="brush"> Ändern</ion-icon></button>
+      <button ion-button color="dark"><ion-icon name="trash"> Löschen</ion-icon></button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
